@@ -6,6 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import Cart from './Components/Cart';
+import Mobile from './Components/Mobile';
+import Appliances from './Components/Appliances';
+import Furniture from './Components/Furniture';
+import Fashion from './Components/Fachion';
+import Toys from './Components/Toys';
+import Electronics from './Components/Electronics';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
@@ -13,6 +20,12 @@ root.render(
     <Route path='/' element={<App />}/>
     <Route path='/home' element={<Home />}/>
     <Route path='/cart' element={<Cart />}/>
+    <Route path='/mobile' element={<Mobile />}/>
+    <Route path='/appliances' element={<Appliances />}/>
+    <Route path='/furniture' element={<Furniture />}/>
+    <Route path='/Fashion' element={<Fashion />}/>
+    <Route path='/Toys' element={<Toys />}/>
+    <Route path='/electronics' element={<Electronics />}/>
   </Routes>
   </BrowserRouter>
    

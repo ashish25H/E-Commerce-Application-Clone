@@ -3,16 +3,17 @@ import NavBar from "./NavBar";
 import { useSelector } from "react-redux";
 import ProductCard from "./ProductCard";
 
-const Toys = () => {
+const Laptop = () => {
   const product = useSelector((state) => state.product.Products);
   console.log(product);
-  const toyArr = product.filter((pro) => pro.category === "Toy");
-  console.log(toyArr);
+  const laptopArr = product.filter((pro) => pro.category === "Laptop");
+  console.log(laptopArr);
+
   return (
     <>
       <NavBar />
       <div className="flex flex-col items-center sm:grid grid-rows-4 grid-cols-3 gap-4 justify-center justify-items-center">
-        {toyArr.map((pro) => (
+        {laptopArr.map((pro) => (
           <ProductCard
             img={pro.image}
             name={pro.name}
@@ -25,4 +26,4 @@ const Toys = () => {
   );
 };
 
-export default Toys;
+export default Laptop;

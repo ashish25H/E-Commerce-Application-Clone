@@ -82,8 +82,8 @@ const NavBar = () => {
           <button className="font-bold text-md">Fashion</button>
         </Link>
 
-        <Link to="/Electronics">
-          <button className="font-bold text-md">Electronics</button>
+        <Link to="/Laptop">
+          <button className="font-bold text-md">Laptop</button>
         </Link>
 
         <Link to="/Furniture">
@@ -99,13 +99,13 @@ const NavBar = () => {
         </Link>
 
         {/* <button className="font-bold text-md">Fashion</button>
-        <button className="font-bold text-md">Electronics</button>
+        <button className="font-bold text-md">Laptop</button>
         <button className="font-bold text-md">Furniture</button>
         <button className="font-bold text-md">Appliances</button>
         <button className="font-bold text-md">Toys</button> */}
       </div>
 
-      <div className="hidden sm:hidden" id="mobileViewMeanu">
+      <div className="hidden z-10  sm:hidden" id="mobileViewMeanu">
         <ul className="flex flex-col items-end">
           <li className="my-3 mr-4 text-xl font-semibold  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
             <Link to='/Mobile'>
@@ -118,8 +118,8 @@ const NavBar = () => {
            </Link>
           </li>
           <li className="my-3 mr-4 text-xl font-semibold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            <Link to='/Electronics'>
-            Electronics
+            <Link to='/Laptop'>
+            Laptop
             </Link>
           </li>
           <li className="my-3 mr-4 text-xl font-semibold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">

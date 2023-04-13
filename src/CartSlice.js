@@ -11,11 +11,6 @@ export const productCartSlice = createSlice({
   reducers: {
     addProductToCart: (state, action) => {
       const product = {
-        // image: action.payload[0],
-        // name: action.payload[1],
-        // price: action.payload[2],
-        // category: action.payload[3],
-
         image:action.payload.img,
         price:action.payload.price,
         name:action.payload.name,
@@ -32,8 +27,11 @@ export const productCartSlice = createSlice({
         state.ProductArray.push(product);
       }
     },
+    removeItemFromCart:(state,action)=>{
+      state.ProductArray = state.ProductArray.filter((pro)=> pro.name !== action.payload);
+    }
   },
 });
 
-export const { addProductToCart } = productCartSlice.actions;
+export const { addProductToCart,removeItemFromCart } = productCartSlice.actions;
 export default productCartSlice.reducer;

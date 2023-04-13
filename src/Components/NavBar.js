@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo/shop-logo-good-600w-1290022027.webp";
 import cart from "../assets/logo/icons8-fast-cart-24.png";
 import search from "../assets/logo/icons8-find-67.png";
@@ -6,8 +6,15 @@ import home from "../assets/logo/icons8-home-24.png";
 import { Link } from "react-router-dom";
 import hamburger from "../assets/logo/icons8-hamburger-32.png";
 import multiply from "../assets/logo/icons8-multiply-30.png";
+import { useSelector } from "react-redux";
+
 
 const NavBar = () => {
+  // const product = useSelector((state) => state.cart.ProductArray);
+  // const [productCount, setProductCount] = useState(product.length);
+  // console.log(productCount);
+
+
   const showMobileViewMeanu = () => {
     const hamburger = document.querySelector("#hamburger");
     const cross = document.querySelector("#cross");
@@ -39,7 +46,7 @@ const NavBar = () => {
     <>
       <nav className="flex justify-between items-center bg-[#2874F0] p-3">
         <div>
-          <img className="w-[50px]" src={logo} alt="logo" />
+          <img className="w-[50px]" src={logo} alt="logo" title="Logo"/>
         </div>
         <div className="hidden sm:block sm:flex sm:bg-[#ffffff]">
           <input
@@ -51,10 +58,10 @@ const NavBar = () => {
         </div>
         <div className="flex justify-center items-center">
           <Link to="/home">
-            <img className="hover:w-[30px] mr-10" src={home} alt="home icon" />
+            <img className="hover:w-[30px] mr-10" src={home} alt="home icon" title="Home"/>
           </Link>
           <Link to="/cart">
-            <img className="hover:w-[30px] " src={cart} alt="cart logo" />
+            <img className="hover:w-[30px] " src={cart} alt="cart logo" title="Cart"/>
           </Link>
 
           <img
@@ -108,34 +115,22 @@ const NavBar = () => {
       <div className="hidden z-10  sm:hidden" id="mobileViewMeanu">
         <ul className="flex flex-col items-end">
           <li className="my-3 mr-4 text-xl font-semibold  transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            <Link to='/Mobile'>
-            Mobile
-            </Link>
+            <Link to="/Mobile">Mobile</Link>
           </li>
           <li className="my-3 mr-4 text-xl font-semibold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-           <Link to='/Fashion'>
-           Fashion
-           </Link>
+            <Link to="/Fashion">Fashion</Link>
           </li>
           <li className="my-3 mr-4 text-xl font-semibold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            <Link to='/Laptop'>
-            Laptop
-            </Link>
+            <Link to="/Laptop">Laptop</Link>
           </li>
           <li className="my-3 mr-4 text-xl font-semibold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            <Link to='/Furniture'>
-            Furniture
-            </Link>
+            <Link to="/Furniture">Furniture</Link>
           </li>
           <li className="my-3 mr-4 text-xl font-semibold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            <Link to='/Appliances'>
-            Appliances
-            </Link>
+            <Link to="/Appliances">Appliances</Link>
           </li>
           <li className="my-3 mr-4 text-xl font-semibold transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            <Link to='/Toys'>
-            Toys
-            </Link>
+            <Link to="/Toys">Toys</Link>
           </li>
         </ul>
       </div>

@@ -25,9 +25,11 @@ export const buyNowSlice = createSlice({
       }
     },
     removeProduct: (state, action) => {
-      state.BuyNowProducts = state.BuyNowProducts.filter(
-        (pro) => pro.name !== action.payload
-      );
+      // state.BuyNowProducts = state.BuyNowProducts.filter(
+      //   (pro) => pro.name !== action.payload
+      // );
+
+      state.BuyNowProducts.length = 0;
     },
   },
 });

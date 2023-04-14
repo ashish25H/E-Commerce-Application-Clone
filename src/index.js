@@ -14,6 +14,7 @@ import Toys from "./Components/Toys";
 import Laptop from "./Components/Laptop";
 import { Provider } from "react-redux";
 import { store } from "./Store/Store";
+import BuyNow from "./Components/BuyNow";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -29,6 +30,7 @@ root.render(
         <Route path="/Fashion" element={<Fashion />} />
         <Route path="/Toys" element={<Toys />} />
         <Route path="/laptop" element={<Laptop />} />
+        <Route path="/buynow" element={<BuyNow />}/>
       </Routes>
     </BrowserRouter>
   </Provider>

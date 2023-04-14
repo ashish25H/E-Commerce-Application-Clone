@@ -11,20 +11,6 @@ const Cart = () => {
 
 //   console.log(cartProducts);
 
-  const [numberOfItems, setNumberOfItems] = useState(0);
-
-  const increseItemNumber = () => {
-    let add = numberOfItems;
-    add += 1;
-    setNumberOfItems(numberOfItems + 1);
-  };
-
-  const decreseItemNumber = () => {
-    let sub = numberOfItems;
-    sub -= 1;
-    setNumberOfItems(numberOfItems - 1);
-  };
-
   const isShowEmptyCartImg = ()=>{
     const emptyCart = document.getElementById('emptyCartSection');
     console.log(emptyCart);
@@ -59,11 +45,6 @@ const Cart = () => {
               <div>
                 <p className="text-[#03203C] text-xl font-semibold mb-2">{pro.name}</p>
                 <p className="text-[#03203C] text-lg font-semibold mb-2">{pro.price}</p>
-                <div className="flex justify-start items-center mb-2">
-                  <button onClick={increseItemNumber} className="bg-[#ffffff] px-2 py-0 rounded-md mr-2">+</button>
-                  <p>{numberOfItems}</p>
-                  <button onClick={decreseItemNumber} className="bg-[#ffffff] px-2 py-0 rounded-md ml-2">-</button>
-                </div>
               </div>
               <div>
                 <button className="bg-[#03203C] text-[#CAD5E2] px-3 py-2 rounded-md mr-3">Buy Now</button>

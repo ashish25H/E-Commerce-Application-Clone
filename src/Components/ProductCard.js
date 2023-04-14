@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../ProductSlice";
 import { addProductToCart } from "../CartSlice";
+import { Link } from "react-router-dom";
+import { addProducts } from "../Slice/BuyNowSlice";
+
 const ProductCard = ({ img, name, price, category }) => {
   const dispatch = useDispatch();
   // const [productImage, setImage] = useState(img);
@@ -21,13 +24,37 @@ const ProductCard = ({ img, name, price, category }) => {
         <p>{price}</p>
       </div>
       <div className="flex justify-center items-center">
-        <button className="bg-[#FB641B] text-[#ffffff] py-3 px-5 font-semibold mr-5">
-          Buy Now
-        </button>
+        <Link to="/BuyNow">
+          <button
+            className="bg-[#FB641B] text-[#ffffff] py-3 px-5 font-semibold mr-5"
+            onClick={() =>
+              dispatch(
+                addProducts({
+                  image: img,
+                  name: name,
+                  price: price,
+                  category: category,
+                })
+              )
+            }
+          >
+            Buy Now
+          </button>
+        </Link>
+
         <button
           className="bg-[#FF9F00] text-[#ffffff] py-3 px-5 font-semibold"
           id="addToCart"
-          onClick={() => dispatch(addProductToCart({img:img,name:name,price:price,category:category}))}
+          onClick={() =>
+            dispatch(
+              addProductToCart({
+                img: img,
+                name: name,
+                price: price,
+                category: category,
+              })
+            )
+          }
         >
           Add To cart
         </button>

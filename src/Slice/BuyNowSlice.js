@@ -16,13 +16,15 @@ export const buyNowSlice = createSlice({
         category: action.payload.category,
       };
 
-      if (
-        !state.BuyNowProducts.some((prd) =>
-          prd.name === pro.name ? true : false
-        )
-      ) {
-        state.BuyNowProducts.push(pro);
-      }
+      // if (
+      //   !state.BuyNowProducts.some((prd) =>
+      //     prd.name === pro.name ? true : false
+      //   )
+      // ) {
+      //   state.BuyNowProducts.push(pro);
+      // }
+
+      state.BuyNowProducts.push(pro);
     },
     removeProduct: (state, action) => {
       // state.BuyNowProducts = state.BuyNowProducts.filter(

@@ -4,6 +4,7 @@ This is an e-commerce application that was built using HTML, Tailwind CSS, React
 
 # Live Link
 ## [Click Here](https://comfy-khapse-30962a.netlify.app)
+live link
 
 # Getting Started
 To run this application, you will need to have Node.js and npm (or Yarn) installed on your computer. Once you have installed these dependencies, you can clone the repository and install the necessary packages by running the following commands in your terminal:

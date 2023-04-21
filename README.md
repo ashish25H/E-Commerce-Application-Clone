@@ -1,6 +1,6 @@
 # E-Commerce Application
 
-This is an e-commerce application that was built using HTML, Tailwind CSS, React, React Router, and Redux Toolkit. It features various sections for products, including mobile, laptop, applications, and fashion. You can add products to your cart and buy them using a dummy buy page.
+This is an e-commerce application that was built using HTML, Tailwind CSS, React, React Router, and Redux Toolkit. It features various sections for products, including mobile, laptop, applications, and fashion. You can add products to your cart and buy them using a dummy buy page.game page
 
 # Live Link
 ## [Click Here](https://comfy-khapse-30962a.netlify.app)
